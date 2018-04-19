@@ -1,0 +1,27 @@
+{ displayName: 'abc@gmail.com',
+  id: 'auth0|5ad6ca935fb3bc1b6d7a6cfa',
+  user_id: 'auth0|5ad6ca935fb3bc1b6d7a6cfa',
+  name: {},
+  picture: 'https://s.gravatar.com/avatar/3f009d72559f51e7e454b16e5d0687a1?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fab.png',
+  nickname: 'abc',
+  _json:
+   { sub: 'auth0|5ad6ca935fb3bc1b6d7a6cfa',
+     nickname: 'abc',
+     name: 'abc@gmail.com',
+     picture: 'https://s.gravatar.com/avatar/3f009d72559f51e7e454b16e5d0687a1?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fab.png',
+     updated_at: '2018-04-18T20:52:30.995Z' },
+  _raw: '{"sub":"auth0|5ad6ca935fb3bc1b6d7a6cfa","nickname":"abc","name":"abc@gmail.com","picture":"https://s.gravatar.com/avatar/3f009d72559f51e7e454b16e5d0687a1?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fab.png","updated_at":"2018-04-18T20:52:30.995Z"}' } 'passport info'
+
+create table userbase (
+id serial primary key unique,
+user_id varchar(200) unique,
+first_name varchar(40),
+last_name varchar(40),
+gender varchar(40),
+hair_color varchar(40),
+eye_color varchar(40),
+hobby varchar(40),
+birthday_day INT2,
+birthday_month INT2,
+birthday_year INT4
+)

@@ -1,0 +1,144 @@
+.landing-page {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(221, 221, 221)
+}
+
+.top-container {
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    width: 100vw;
+}
+
+.profile-container {
+    display: flex;
+    height: 100%;
+    width: 20%;
+    background-color: white;
+    margin: 20px;
+    box-shadow: 0 10px 20px 0
+    rgba(0,0,0,0.1), 0 6px 6px 0
+    rgba(0,0,0,.2);
+}
+
+.second-container {
+ height:100%;
+ width: 60%;
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.img-profile {
+    margin: 5px;
+    height: 90%;
+    width: 40%;
+    border: 2px solid #FF9770;
+}
+
+.profile-name {
+    height: 58%;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 5px;
+}
+
+.edit-profile {
+    height: 30%;
+    width: 100%;
+    border-radius: 1px;
+    background-image: radial-gradient(circle at 50% 0, #ffffff, #f1eceb);
+    border: solid 1px #ccc3c3;
+    margin: 5px;
+}
+
+.description-container {
+    display: flex;
+    align-content: flex-start;
+    height: 100%;
+    width: 33%;
+    background-color: white;
+    margin: 20px;
+    box-shadow: 0 10px 20px 0
+    rgba(0,0,0,0.1), 0 6px 6px 0
+    rgba(0,0,0,.2);
+}
+
+.description-text {
+    height: 90%;
+    width: 90%;
+    margin:10px;
+}
+
+.bot-container {
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
+    background-color: rgb(221, 221, 221);
+    margin-top: 50px;
+}
+
+.friend-container {
+    height: 90%;
+    width: 56%;
+    background-color: white;
+    box-shadow: 0 10px 20px 0
+    rgba(0,0,0,0.1), 0 6px 6px 0
+    rgba(0,0,0,.2);
+}
+
+.top-friend-container {
+    display: flex;
+    justify-content: space-between;
+    height:10%;
+    width: 99%;
+    padding: 5px;
+}
+
+.rec-friend-container {
+    display: flex;
+    flex-direction: row;
+    align-content: flex start;
+    flex-wrap: wrap;
+    height: 88%;
+    width: 100%;
+}
+
+.friend-info-container {
+    height: 17%;
+    width: 48%;
+    box-shadow: 0px 1px 1px 0px;
+    margin: 5px;
+    display:flex;
+    align-items: center;
+}
+
+.img-rec-friend { 
+    height: 100%;
+    width: 25%;
+}
+
+.rec-friend-name {
+    height: 50%;
+    width: 50%;
+    
+}
+
+.rec-friend-text {
+    margin: 20px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.add-friendo {
+    height: 40%;
+    width: 35%;
+   border-radius: 1px;
+   background-image: radial-gradient(circle at 50%, #ff9770, #ff7a6e);
+   box-shadow: 0 1px 3px 0
+    rgba(0,0,0,0.1), 0 1px 2px 0
+     rgba(0,0,0,.2);
+     margin-right: 10px;
+}
