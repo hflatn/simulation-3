@@ -47,7 +47,7 @@ class landing extends Component {
                         <img class = "img-profile" src = "Preview"/>
                         <div className = "second-container">
                         <div className = "profile-name"> {newpeople} </div>
-                        <button className = "edit-profile"> Edit Profile </button>
+                       <Link to='/editprofile'> <button className = "edit-profile"> Edit Profile </button> </Link>
                         </div>
                     </div>
                     <div className = "description-container"> 

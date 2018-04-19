@@ -1,0 +1,108 @@
+.edit-page {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(221, 221, 221);
+    display: flex;
+    justify-content: center;
+}
+
+.edit-container {
+    margin-top: 10px;
+    height: 80%;
+    width: 60%;
+}
+
+.top-edit-container {
+    display:flex;
+    justify-content: space-between;
+    height: 25%;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px 0
+    rgba(0,0,0,0.1), 0 6px 6px 0
+    rgba(0,0,0,.2);
+}
+
+.bot-edit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 10px 20px 0
+    rgba(0,0,0,0.1), 0 6px 6px 0
+    rgba(0,0,0,.2);
+}
+
+.top-left-edit{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.top-right-edit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+
+.img-edit {
+    margin: 5px 0px 5px 5px;
+    height: 90%;
+    width: 40%;
+    border: 2px solid #FF9770;
+}
+
+.edit-update {
+    height: 20%;
+    width: 25%;
+    border-radius: 1px;
+    background-image: radial-gradient(circle at 50% 0,
+    #737373, #403d39); 
+    border: solid 1px #ccc3c3;
+    color:white;
+}
+
+.edit-cancel {
+    height: 20%;
+    width: 25%;
+    border-radius: 1px;
+    background-image: radial-gradient(circle at 50% 0,
+    #ffffff, #f1eceb);
+    border: solid 1px #ccc3c3;
+    margin-left: 15px;
+}
+
+.bot-mid-edit {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    height: 80%;
+    width: 50%;
+}
+
+.input-name-edit {
+    border-radius: 2px;
+    font-size: 15px;
+    width: 70%;
+    font-weight: 400;
+    border: 1px solid #FF9770;
+    outline: none;
+    margin: 5px 0px 5px 0px;
+}
+
+select {
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0
+    rgba(0,0,0,0.1), 0 1px 2px 0
+    rgba(0,0,0,.2);
+    width: 80px;
+    height: 20px;
+    margin: 30px 30px 30px 3px;
+}

@@ -21,7 +21,10 @@ class dash extends Component {
     return(
         
             <div className = "dash-dashboard">
-                <div className = "dash-icon"> Helo <img class="img-icon" src = { home }/> <img class="img-icon" src = { search }/> </div>
+                <div className = "dash-icon"> Helo 
+                <Link to = '/dashboard'>  <img class="img-icon" src = { home }/> </Link> 
+                <Link to = '/search'> <img class="img-icon" src = { search }/> </Link>
+                 </div>
                 <div className = "dash-icon"> Dashboard </div>
                 <a className = "dash-logout" href="https://first-tenny.auth0.com/v2/logout?returnTo=http://localhost:3000/#/"> Logout </a>
             </div>

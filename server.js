@@ -73,7 +73,7 @@ app.get('/auth/callback', passport.authenticate('auth0', {
 }))
 
 app.get('/api/workdatserver', controller.workdatserver);
-
+app.patch('/api/profileInfo', controller.profileinfo);
 
 const port = process.env.PORT || 3333
 app.listen( port, () => { console.log("Be-Booo-Booo-Bop...Server Online...Beep-Boop")})
