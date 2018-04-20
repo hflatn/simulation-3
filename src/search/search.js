@@ -10,34 +10,37 @@ class search extends Component {
     constructor(props){
         super(props);
         this.state = {
-            people: []
+            people: [],
+            friend: []
         }
     }
 
-
     componentDidMount(){
-        axios.get('/api/workdatserver').then( res => {
+        console.log( )
+        axios.get(`/api/search/${this.props.match.params.pg}`).then( res => {
             console.log(res.data, "resdata info")
             this.setState({
-                people: res.data
+                friend: res.data
             })
-    
         })
-    
     }
 
     render(){
         
-            var newpeople = this.state.people.map((people) =>
-            <ul key = {people.id} >
-        <div className = "profile-name"> {people.first_name} {people.last_name} </div>
-        </ul>
-        //  {/* <div className = "friend-info-container"> 
-        // <img class ="img-rec-friend" src = "preview" /> 
-        // <span className = "rec-friend-text"> {this.state.people.} Jimm </span>
-        // <button className ="add-friendo"> Add Friend </button>
-        // </div>  */}
-        )
+            var newpeople = this.state.friend.map((friend) =>
+            <ul key = {friend.id} >
+        <img class ="img-rec-friend" src = "preview" /> 
+        <span className = "rec-friend-text">  {friend.first_name} {friend.last_name}  </span>
+        <button className ="add-friendo"> Add Friend </button> 
+        </ul> 
+         )
+
+        //                         <div className = "friend-info-container"> 
+        //                     <img class ="img-rec-friend" src = "preview" /> 
+        //                     <span className = "rec-friend-text">  Jimm </span>
+        //                     <button className ="add-friendo"> Add Friend </button>
+        //                     </div> 
+    
         return (
             
             <div>
@@ -51,10 +54,6 @@ class search extends Component {
                             <option value=""> Select </option>
                             <option value="first_name"> First Name </option>
                             <option value="last_name"> Last Name </option>
-                            <option value="gender"> Gender </option>
-                            <option value="hair_color"> Hair Color </option>
-                            <option value="eye_color"> Eye Color </option>
-                            <option value="hobby"> Hobby </option>
                             </select>
                             </div>
                             <div>
@@ -64,8 +63,15 @@ class search extends Component {
                                 <button className = "search-but"> Search </button>
                                 <button className = "reset-but"> Reset </button>
                         </div>
-                        <div className = "search-bot-container"> 
+
+                        <div className = "search-bot-container">
+    
+                        {newpeople}
+                    
                         </div>
+
+                        <button> Button </button>
+
                     </div>
                 </div>
             </div>

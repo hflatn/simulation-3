@@ -1,4 +1,3 @@
-Insert into userbase (user_id)
-Values ($1)
-where $1 != user_id
+Insert into userbase (user_id, first_name, profile_picture)
+Values ( $1, $2, $3 )
 returning *

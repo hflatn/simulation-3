@@ -25,5 +25,17 @@ module.exports = {
                 (console.log(err, "profileinfo error"))
                 res.status(500).send()
             })
+    },
+
+    friendo: ( req, res, next ) => {
+        const db = req.app.get('db');
+        console.log(req.params.pg, "pg number")
+
+        db.all_friend([ req.params.pg ])
+        .then(( friends ) => res.status(200).send(friends))
+        .catch((err) => {
+            (console.log(err, "grab friendo error"))
+            res.status(500).send()
+        })
     }
 }

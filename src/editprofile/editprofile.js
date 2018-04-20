@@ -28,13 +28,13 @@ class editprofile extends Component {
 
     profileInfo(){
         const { 
-            first_namestring, last_namestring, genderstring, hair_colorstring,eye_colorstring, hobbystring, birthday_daystring, birthday_monthstring, birthday_yearstring
+            first_namestring, last_namestring, genderstring, hair_colorstring,eye_colorstring, hobbystring, birthday_daystring, birthday_monthstring, birthday_yearstring,
         } = this.props
         let body = { first_namestring, last_namestring, genderstring, hair_colorstring,eye_colorstring, hobbystring, birthday_daystring, birthday_monthstring, birthday_yearstring }
             axios.patch('/api/profileInfo', body).then(res => {
-                console.log("profile updated")
                 window.location.reload();
-            })
+                console.log("profile")
+            }) 
     }
     render(){
 
@@ -43,6 +43,13 @@ class editprofile extends Component {
         <div className = "profile-name"> {people.first_name} {people.last_name} </div>
         </ul>
         )
+
+        var newpic = this.state.people.map((people) =>
+            <ul key = {people.id} >
+            <div>
+           <img class = "img-profile" src = {people.profile_picture}/>
+           </div>
+            </ul>)
 
         const { 
             first_namestring, last_namestring, genderstring, hair_colorstring,eye_colorstring, hobbystring, birthday_daystring, birthday_monthstring, birthday_yearstring,
@@ -57,12 +64,12 @@ class editprofile extends Component {
                 <div className = "edit-container">
                     <div className = "top-edit-container">
                         <div className = "top-left-edit">
-                            <img class = "img-edit" src = "Preview" />
+                            {newpic}
                             {newpeople}
                         </div>
                         <div className = "top-right-edit">
                             <button className = "edit-update" onClick={() => this.profileInfo()}> Update </button>
-                            <button className = "edit-cancel"> Cancel </button>
+                            <button className = "edit-cancel" onClick={() => {window.location.reload()}}> Cancel </button>
                         </div>
                     </div>
                     <div className = "bot-edit-container">
@@ -94,7 +101,7 @@ class editprofile extends Component {
                     <div>
                         <span>Hair Color:</span>
                         <select onChange={(e) => hair_color(e.target.value)} >
-                        <option value=""> Select </option>
+                        <option value= ""> Select </option>
                         <option value="Blonde">Blonde</option>
                         <option value="Black">Black</option>
                         <option value="White">White</option>
@@ -110,11 +117,10 @@ class editprofile extends Component {
                         <option value=""> Select </option> :
                         <option value= {eye_colorstring} > {eye_colorstring} </option>
                     }
-                        <option value=""> Select </option>
-                        <option value="blue">Blue</option>
-                        <option value="green">Green</option>
-                        <option value="brown">Brown</option>
-                        <option value="hazel">Hazel</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Green">Green</option>
+                        <option value="Brown">Brown</option>
+                        <option value="Hazel">Hazel</option>
                         </select>
                     </div>
 
@@ -123,7 +129,7 @@ class editprofile extends Component {
                         <select onChange={(e) => hobby(e.target.value)} >
                         { !hobbystring ?
                         <option value=""> Select </option> :
-                        <option value= {hobbystring} > {hobbystring} </option>
+                        <option value= {eye_colorstring} > {eye_colorstring} </option>
                         }
                         <option value="Gaming">Gaming</option>
                         <option value="Skiing">Skiing</option>
@@ -195,7 +201,7 @@ class editprofile extends Component {
                         <span>Birthday Year:</span>
                         <select onChange={(e) => birthday_year(e.target.value)} >
                         { !birthday_yearstring ? 
-                        <option value= {null} > Select </option> :
+                        <option value=""> Select </option> :
                         <option value= {birthday_yearstring} > {birthday_yearstring} </option> }
                         <option value= "2017" > 2017 </option>
                         <option value= "2016" > 2016 </option>

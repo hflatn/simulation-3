@@ -11,7 +11,7 @@ export default (
         < Route component = { login } path = "/" exact />
         < Route component = { landing } path = "/dashboard"/>
         < Route component = { editprofile } path = "/editprofile"/>
-        < Route component = { search } path = "/search"/>
+        < Route component = { search } path = "/search/:pg"/>
 
     </Switch>
 )

@@ -11,8 +11,6 @@ class login extends Component {
     }
 
 
-
-
     render() {
     
     

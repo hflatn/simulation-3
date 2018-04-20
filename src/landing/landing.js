@@ -31,27 +31,34 @@ class landing extends Component {
             var newpeople = this.state.people.map((people) =>
             <ul key = {people.id} >
         <div className = "profile-name"> {people.first_name} {people.last_name} </div>
-        </ul>
+        </ul>)
+
+            var newpic = this.state.people.map((people) =>
+            <ul key = {people.id} >
+            <div>
+           <img class = "img-profile" src = {people.profile_picture}/>
+           </div>
+            </ul>)
         //  {/* <div className = "friend-info-container"> 
         // <img class ="img-rec-friend" src = "preview" /> 
         // <span className = "rec-friend-text"> {this.state.people.} Jimm </span>
         // <button className ="add-friendo"> Add Friend </button>
         // </div>  */}
-        )
+        
         return (
             
             <div className = "landing-page">
             <Dash/>
                 <div className = "top-container">
                     <div className = "profile-container">
-                        <img class = "img-profile" src = "Preview"/>
+                        {newpic}
                         <div className = "second-container">
                         <div className = "profile-name"> {newpeople} </div>
                        <Link to='/editprofile'> <button className = "edit-profile"> Edit Profile </button> </Link>
                         </div>
                     </div>
                     <div className = "description-container"> 
-                        <span className="description-text">  Sample text sample text sample text sample text sample text sample text sample text sample text. </span>
+                        <span className="description-text">  Welcome to Helo! </span>
                     </div>
                 </div>
 

@@ -36,10 +36,11 @@ passport.use( new Auth0Strategy({
 },  
  function(acessToken, refreshToken, extraParams, profile, done){
     const db = app.get('db')
-
+    const pic = "https://robohash.org/me"
+    console.log(profile, "profileinfo")
      db.find_user([ profile.user_id ]).then( ( userbase ) => {
          if (!userbase[0]) {
-             db.create_user([profile.user_id]).then((userbase) => {
+             db.create_user([profile.user_id, profile.nickname ,pic]).then((userbase) => {
                 return done(null, userbase[0].user_id)
                 })
             }
@@ -51,7 +52,6 @@ passport.use( new Auth0Strategy({
 ))
 
 passport.serializeUser( (user_id, done) => { 
-    console.log(user_id, "id userbase info")
     return done(null, user_id)
 })
 
@@ -73,6 +73,7 @@ app.get('/auth/callback', passport.authenticate('auth0', {
 }))
 
 app.get('/api/workdatserver', controller.workdatserver);
+app.get('/api/search/:pg', controller.friendo)
 app.patch('/api/profileInfo', controller.profileinfo);
 
 const port = process.env.PORT || 3333
